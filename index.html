@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillCraft Technology</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: transparent;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      transition: background 0.3s ease;
+    }
+
+    header.scrolled {
+      background-color: #1d3557;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f1faee;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-left: 30px;
+    }
+
+    .nav-links a {
+      color: #f1faee;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #e63946;
+      border-bottom: 2px solid #e63946;
+    }
+
+    section {
+      padding: 100px 50px;
+      min-height: 100vh;
+    }
+
+    #home {
+      background-color: #a8dadc;
+    }
+
+    #services {
+      background-color: #f1faee;
+    }
+
+    #about {
+      background-color: #457b9d;
+      color: white;
+    }
+
+    #contact {
+      background-color: #e63946;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="navbar">
+    <div class="logo">SkillCraft Technology</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Welcome to SkillCraft Technology</h1>
+    <p>Innovative IT solutions crafted for your business.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>We provide web development, cybersecurity, and cloud solutions.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are passionate about empowering businesses through technology.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Reach out to us at <strong>contact@skillcraft.tech</strong></p>
+  </section>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
